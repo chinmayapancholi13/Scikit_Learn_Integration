@@ -145,3 +145,60 @@ class SklearnWrapperHDPModel(models.HdpModel, TransformerMixin, BaseEstimator):
 
         pass
 ```
+
+- **Text to Bag-of-words Model**
+
+```python
+class SklearnWrapperTextToBOWModel(TransformerMixin, BaseEstimator):
+    """
+    Base Text_to_BOW module
+    """
+
+    def __init__(params): # add params
+        """
+        Initialize the Text_to_BOW model using the parameter values passed
+        """
+        pass
+
+
+    def get_params(self, deep=True):
+        """
+        Return all the relevant parameters of the model as a dictionary
+        """
+        pass
+
+
+    def set_params(self, **parameters):
+        """
+        Set all the parameters passed
+        """
+        for parameter, value in parameters.items():
+            self.parameter = value
+        return self
+
+
+    def fit(self, X, y=None):
+        """
+        Fit the input data into the class object
+        """
+        # learn a vocabulary dictionary for the input text using the parameters passed
+
+        pass
+
+    def transform(self, docs):
+        """
+        Return the topics corresponding to documents passed as the parameter
+        """
+        # construct and return the bag-of-words model using the vocabulary created earlier
+
+        pass
+
+
+    def partial_fit(self, data):
+        """
+        Incrementally train the model
+        """
+        # update the vocabulary for the new text and the return the new bag-of-words model
+
+        pass
+```
